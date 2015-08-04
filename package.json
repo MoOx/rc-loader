@@ -1,0 +1,44 @@
+{
+  "name": "rc-loader",
+  "version": "1.0.0",
+  "description": "Runtime configuration loader that supports YAML, JSON or JS",
+  "keywords": [
+    "rc",
+    "rcloader",
+    "config"
+  ],
+  "author": "Maxime Thirouin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MoOx/rc-loader.git"
+  },
+  "homepage": "https://github.com/MoOx/rc-loader",
+  "bugs": {
+    "url": "https://github.com/MoOx/rc-loader/issues"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "!**/__tests__"
+  ],
+  "dependencies": {
+    "eval": "^0.1.0",
+    "js-yaml": "^3.3.1",
+    "rc": "^1.1.0",
+    "strip-json-comments": "^1.0.4"
+  },
+  "devDependencies": {
+    "babel": "^5.8.20",
+    "babel-tape-runner": "^1.1.0",
+    "eslint": "^1.0.0",
+    "rimraf": "^2.4.2",
+    "tape": "^4.0.2"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "tape": "babel-tape-runner 'src/**/__tests__/*.js'",
+    "test": "npm run lint && npm run tape",
+    "prepublish": "rimraf dist && babel src --out-dir dist"
+  }
+}
