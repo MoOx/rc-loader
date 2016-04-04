@@ -1,3 +1,7 @@
+# UNMAINTAINED
+
+See [cosmiconfig](https://github.com/davidtheclark/cosmiconfig).
+
 # rc-loader [![Build Status](https://travis-ci.org/MoOx/rc-loader.svg?branch=master)](https://travis-ci.org/MoOx/rc-loader)
 
 > Runtime configuration loader that supports YAML, JSON or JS.
