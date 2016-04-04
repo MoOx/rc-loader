@@ -6,7 +6,7 @@ export default function parser(content, file) {
   try {
     return yaml.safeLoad(stripJsonComments(content))
   }
-  catch(e) {
+  catch (e) {
     // `(module.)exports` = JS ?
     if (/exports/.test(content)) {
       return evalModule(content)
