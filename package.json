@@ -23,9 +23,11 @@
     "!**/__tests__"
   ],
   "dependencies": {
-    "eval": "^0.1.0",
+    "find-up": "^1.0.0",
     "js-yaml": "^3.3.1",
+    "pify": "^2.3.0",
     "rc": "^1.1.0",
+    "require-from-string": "^1.1.0",
     "strip-json-comments": "^1.0.4"
   },
   "devDependencies": {
@@ -36,9 +38,10 @@
     "tape": "^4.0.2"
   },
   "scripts": {
+    "build": "babel src --out-dir dist",
     "lint": "eslint .",
     "tape": "babel-tape-runner 'src/**/__tests__/*.js'",
     "test": "npm run lint && npm run tape",
-    "prepublish": "rimraf dist && babel src --out-dir dist"
+    "prepublish": "rimraf dist && npm run build"
   }
 }
